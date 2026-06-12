@@ -19,8 +19,8 @@ export function UnlockScreen({ title, buttonLabel, onUnlock }: UnlockScreenProps
       </h1>
       <button
         onClick={onUnlock}
-        className="px-8 py-4 rounded-full bg-white/20 backdrop-blur-sm text-lg font-medium
-                   hover:bg-white/30 focus-visible:outline-2 focus-visible:outline-white
+        className="px-8 py-4 rounded-full bg-[#1B4F5C]/15 backdrop-blur-sm text-lg font-medium text-[#1B4F5C]
+                   hover:bg-[#1B4F5C]/25 focus-visible:outline-2 focus-visible:outline-[#1B4F5C]
                    transition-colors"
         aria-label={buttonLabel}
       >

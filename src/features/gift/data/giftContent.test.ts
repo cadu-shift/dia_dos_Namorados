@@ -13,7 +13,7 @@ describe('giftContent', () => {
 
   it('has music metadata', () => {
     expect(giftContent.music.title).toBeTruthy()
-    expect(giftContent.music.audioSrc).toContain('Foi assim')
+    expect(giftContent.music.audioSrc).toContain('foi-assim')
   })
 
   it('has message content', () => {

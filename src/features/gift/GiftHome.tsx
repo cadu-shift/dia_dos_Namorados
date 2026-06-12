@@ -11,13 +11,12 @@ import { MomentsCard } from './components/MomentsCard'
 
 export default function GiftHome() {
   const [isUnlocked, setIsUnlocked] = useState(false)
-  const { status, toggle, errorMessage } = useAudioPlayer(giftContent.music.audioSrc)
+  const { status, toggle, play, errorMessage } = useAudioPlayer(giftContent.music.audioSrc)
   const duration = useRelationshipTimer(giftContent.relationshipStartDate)
 
   const handleUnlock = () => {
     setIsUnlocked(true)
-    const audio = new Audio(giftContent.music.audioSrc)
-    audio.play().catch(() => {})
+    play()
   }
 
   return (
@@ -44,7 +43,7 @@ export default function GiftHome() {
             title={giftContent.coupleCard.title}
             photoSrc={giftContent.coupleCard.photoSrc}
             photoAlt={giftContent.coupleCard.photoAlt}
-            durationText={duration.displayText}
+            duration={duration}
           />
           <MessageCard
             title={giftContent.messageTitle}

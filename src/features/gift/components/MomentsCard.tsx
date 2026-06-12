@@ -14,7 +14,7 @@ export function MomentsCard({ title, moments }: MomentsCardProps) {
   if (moments.length === 0) {
     return (
       <GiftCard title={title}>
-        <p className="text-white/70">Nenhum momento cadastrado ainda.</p>
+        <p className="text-[#1B4F5C]/60">Nenhum momento cadastrado ainda.</p>
       </GiftCard>
     )
   }
@@ -55,11 +55,11 @@ export function MomentsCard({ title, moments }: MomentsCardProps) {
                 }}
               />
             )}
-            <p className="hidden mt-2 text-sm text-white/70" role="alert">
+            <p className="hidden mt-2 text-sm text-[#1B4F5C]/60" role="alert">
               Mídia indisponível
             </p>
             {current.caption && (
-              <p className="mt-2 text-sm text-white/80">{current.caption}</p>
+              <p className="mt-2 text-sm text-[#1B4F5C]/70">{current.caption}</p>
             )}
           </motion.div>
         </AnimatePresence>
@@ -67,17 +67,17 @@ export function MomentsCard({ title, moments }: MomentsCardProps) {
         <div className="flex justify-between items-center">
           <button
             onClick={prev}
-            className="px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 focus-visible:outline-2 focus-visible:outline-white transition-colors"
+            className="px-4 py-2 rounded-lg bg-[#1B4F5C]/10 hover:bg-[#1B4F5C]/20 focus-visible:outline-2 focus-visible:outline-[#1B4F5C] transition-colors text-[#1B4F5C] font-bold text-xl"
             aria-label="Momento anterior"
           >
             ‹
           </button>
-          <span className="text-sm text-white/70">
+          <span className="text-sm text-[#1B4F5C]/60">
             {index + 1} / {moments.length}
           </span>
           <button
             onClick={next}
-            className="px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 focus-visible:outline-2 focus-visible:outline-white transition-colors"
+            className="px-4 py-2 rounded-lg bg-[#1B4F5C]/10 hover:bg-[#1B4F5C]/20 focus-visible:outline-2 focus-visible:outline-[#1B4F5C] transition-colors text-[#1B4F5C] font-bold text-xl"
             aria-label="Próximo momento"
           >
             ›

@@ -41,14 +41,40 @@ export const giftContent: GiftContent = {
   music: {
     title: 'Foi Assim',
     artist: 'Sotam',
-    audioSrc: '/dia_dos_Namorados/assets/Foi assim - Sotam.mp3',
-    coverSrc: '/dia_dos_Namorados/assets/placeholder-cover.jpg',
+    audioSrc: '/dia_dos_Namorados/assets/foi-assim-sotam.mp3',
+    coverSrc: '/dia_dos_Namorados/assets/img3.jpg',
     coverAlt: 'Capa do álbum',
   },
   coupleCard: {
     title: 'Sobre o casal',
-    photoSrc: '/dia_dos_Namorados/assets/placeholder-couple.jpg',
+    photoSrc: '/dia_dos_Namorados/assets/img1.jpg',
     photoAlt: 'Foto do casal',
   },
-  moments: [],
+  moments: [
+    {
+      id: 'moment-1',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img2.jpg',
+      alt: 'Momento especial 1',
+    },
+    {
+      id: 'moment-2',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img4.jpg',
+      alt: 'Momento especial 2',
+    },
+    {
+      id: 'moment-3',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img5.jpg',
+      alt: 'Momento especial 3',
+    },
+    {
+      id: 'moment-4',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img6.jpg',
+      alt: 'Momento especial 4',
+    },
+  ],
 }
+

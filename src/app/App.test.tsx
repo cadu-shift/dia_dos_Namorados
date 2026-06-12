@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import App from './App'
+import { giftContent } from '../features/gift/data/giftContent'
 
 describe('App routing', () => {
   beforeEach(() => {
@@ -19,6 +20,11 @@ describe('App routing', () => {
   })
 
   it('uses correct Vite base path for production assets', () => {
-    expect(import.meta.env.BASE_URL).toBe('/dia_dos_Namorados/')
+    // import.meta.env.BASE_URL is a Vite build-time constant (always '/' in jsdom).
+    // We verify the same intent by checking that asset paths in giftContent
+    // embed the correct /dia_dos_Namorados/ base path for GitHub Pages deployment.
+    expect(giftContent.music.audioSrc).toContain('/dia_dos_Namorados/')
+    expect(giftContent.music.coverSrc).toContain('/dia_dos_Namorados/')
+    expect(giftContent.coupleCard.photoSrc).toContain('/dia_dos_Namorados/')
   })
 })

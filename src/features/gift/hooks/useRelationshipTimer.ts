@@ -9,7 +9,7 @@ export function useRelationshipTimer(startDate: string): RelationshipDuration {
   useEffect(() => {
     const interval = setInterval(() => {
       setDuration(calculateRelationshipDuration(startDate))
-    }, 60000)
+    }, 1000)
 
     return () => clearInterval(interval)
   }, [startDate])

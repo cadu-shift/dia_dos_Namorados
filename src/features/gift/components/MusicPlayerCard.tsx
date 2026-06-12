@@ -39,13 +39,13 @@ export function MusicPlayerCard({
         />
         <div className="flex-1 min-w-0">
           <p className="font-medium truncate">{title}</p>
-          <p className="text-sm text-white/70 truncate">{artist}</p>
+          <p className="text-sm text-[#1B4F5C]/60 truncate">{artist}</p>
         </div>
         <button
           onClick={onToggle}
-          className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center
-                     hover:bg-white/30 focus-visible:outline-2 focus-visible:outline-white transition-colors
-                     text-lg"
+          className="w-10 h-10 rounded-full bg-[#1B4F5C]/15 flex items-center justify-center
+                     hover:bg-[#1B4F5C]/25 focus-visible:outline-2 focus-visible:outline-[#1B4F5C] transition-colors
+                     text-lg text-[#1B4F5C]"
           aria-label={label}
           disabled={status === 'error'}
         >
@@ -53,7 +53,7 @@ export function MusicPlayerCard({
         </button>
       </motion.div>
       {status === 'error' && errorMessage && (
-        <p className="mt-3 text-sm text-red-300" role="alert">
+        <p className="mt-3 text-sm text-red-600" role="alert">
           {errorMessage}
         </p>
       )}

@@ -16,14 +16,11 @@ export function useAudioPlayer(src: string): UseAudioPlayerReturn {
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
-    const audio = new Audio(src)
+    const audio = new Audio()
+    audio.preload = 'none'
     audio.loop = true
+    audio.src = src
     audioRef.current = audio
-
-    audio.onerror = () => {
-      setStatus('error')
-      setErrorMessage('Não foi possível carregar o áudio.')
-    }
 
     return () => {
       audio.pause()
@@ -36,10 +33,14 @@ export function useAudioPlayer(src: string): UseAudioPlayerReturn {
     if (!audio) return
 
     audio.play()
-      .then(() => setStatus('playing'))
-      .catch(() => {
+      .then(() => {
+        setStatus('playing')
+        setErrorMessage(null)
+      })
+      .catch((err) => {
+        console.error('Audio play error:', err)
         setStatus('error')
-        setErrorMessage('O áudio não pôde ser iniciado. Verifique as permissões do navegador.')
+        setErrorMessage('Não foi possível reproduzir o áudio. Tente novamente.')
       })
   }, [])
 
@@ -58,3 +59,4 @@ export function useAudioPlayer(src: string): UseAudioPlayerReturn {
 
   return { status, play, pause, toggle, errorMessage }
 }
+
