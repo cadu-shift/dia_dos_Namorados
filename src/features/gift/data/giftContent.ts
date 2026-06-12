@@ -37,17 +37,17 @@ export const giftContent: GiftContent = {
   relationshipStartDate: '2023-11-13',
   messageTitle: 'Mensagem especial',
   messageBody:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    'Você é a melhor conquista da minha vida. Por mais dificeis que estejam sendo os problemas que estamos enfretamos, sei que todos os esforços serão recompensados algum dia e que vamos desfrutar de todos os nossos sonhos que passamos noites e noites planejando. Eu me orgulho do seu esforço diário e da pessoa maravilhosa que você é, do seu espirito apoiador e sou muito sortudo por ter você ao meu lado. Quero que saiba que sempre estarei aqui quando você precisar para sempre, e que nosso amor vai superar todos os obstaculos. Eu te amo mais do que palavras podem expressar ❤️❤️',
   music: {
     title: 'Foi Assim',
     artist: 'Sotam',
     audioSrc: '/dia_dos_Namorados/assets/foi-assim-sotam.mp3',
-    coverSrc: '/dia_dos_Namorados/assets/img3.jpg',
+    coverSrc: '/dia_dos_Namorados/assets/img1.jpg',
     coverAlt: 'Capa do álbum',
   },
   coupleCard: {
     title: 'Sobre o casal',
-    photoSrc: '/dia_dos_Namorados/assets/img1.jpg',
+    photoSrc: '/dia_dos_Namorados/assets/img3.jpg',
     photoAlt: 'Foto do casal',
   },
   moments: [
@@ -75,6 +75,42 @@ export const giftContent: GiftContent = {
       src: '/dia_dos_Namorados/assets/img6.jpg',
       alt: 'Momento especial 4',
     },
+    {
+      id: 'moment-5',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img7.jpg',
+      alt: 'Momento especial 5',
+    },
+    {
+      id: 'moment-6',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img8.jpg',
+      alt: 'Momento especial 6',
+    },
+    {
+      id: 'moment-7',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img9.jpg',
+      alt: 'Momento especial 7',
+    },
+    {
+      id: 'moment-8',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img10.jpg',
+      alt: 'Momento especial 8',
+    },
+    {
+      id: 'moment-9',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img11.jpg',
+      alt: 'Momento especial 9',
+    },
+    {
+      id: 'moment-10',
+      type: 'photo',
+      src: '/dia_dos_Namorados/assets/img12.jpg',
+      alt: 'Momento especial 10',
+    }
   ],
 }
 
